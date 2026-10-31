@@ -1,0 +1,27 @@
+MOODIFY – FRONTEND
+
+The frontend of Moodify is developed using React.js and JavaScript. It provides the user interface through which users can interact with the application.
+
+Technologies Used:
+- React.js
+- JavaScript
+- HTML5
+- SCSS
+- Vite
+- React Router
+- Axios
+- MediaPipe Tasks Vision
+
+Key Features:
+1. User registration and login interface.
+2. Webcam integration for facial expression detection.
+3. Real-time facial expression analysis using Google MediaPipe FaceLandmarker.
+4. Mood classification into Happy, Sad, Surprised, and Neutral categories.
+5. User-friendly and responsive interface.
+6. Integration with backend APIs for authentication and music-related operations.
+
+Working:
+The frontend captures facial expressions through the user's webcam and processes them locally using MediaPipe. It communicates with the backend through API requests to handle authentication and other application operations.
+
+Note:
+Facial expression processing takes place in the browser. Webcam frames are not sent to the backend.

@@ -1,0 +1,40 @@
+MOODIFY – BACKEND
+
+The backend of Moodify is developed using Node.js and Express.js. It manages application logic, user authentication, database operations, and music file uploads.
+
+Technologies Used:
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Mongoose
+- JWT (JSON Web Token)
+- bcryptjs
+- Redis
+- Multer
+- node-id3
+- ImageKit
+- Cookie Parser
+- CORS
+
+Key Features:
+1. User registration and login APIs.
+2. Secure password hashing using bcryptjs.
+3. JWT-based authentication and authorization.
+4. Cookie-based session management.
+5. Token blacklisting using Redis and MongoDB for secure logout.
+6. MP3 file upload functionality using Multer.
+7. Automatic extraction of song metadata and album artwork using node-id3.
+8. Cloud storage integration using ImageKit.
+9. MongoDB Atlas integration for storing user and song information.
+
+Working:
+The backend receives API requests from the frontend, validates user credentials, manages authentication, and interacts with MongoDB Atlas. It also handles music uploads, extracts metadata, and stores media files in ImageKit.
+
+Security:
+- Passwords are stored in hashed form.
+- JWT tokens are used for authentication.
+- Protected routes restrict unauthorized access.
+- Sensitive credentials are maintained using environment variables.
+
+Note:
+The backend is responsible for server-side operations, while facial expression detection is performed on the frontend.
