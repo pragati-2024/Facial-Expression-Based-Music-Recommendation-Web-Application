@@ -4,6 +4,7 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const errorMiddleware = require("./src/middleware/errorMiddleware");
 
 const app = express();
 
@@ -18,6 +19,14 @@ app.get("/", (req, res) => {
         message: "Facial Expression Music Backend is running!"
     });
 });
+
+app.use((req, res, next) => {
+    const error = new Error(`Route not found: ${req.originalUrl}`);
+    error.statusCode = 404;
+    next(error);
+});
+
+app.use(errorMiddleware);
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGO_URI)
